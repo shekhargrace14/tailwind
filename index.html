@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screen:{
+                        '3xl' : '1640px'
+                    },
+                    colors: {
+                        redofred: '#da373d',
+                    }
+                }
+                , screens: {
+                    'sm': '567px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1024px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+
+                    '2xl': '1536px',
+                    // => @media (min-width: 1536px) { ... }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-black text-white sm:bg-white 3xl:bg-redofred">
+
+    <h1 class="text-3xl py-10 px-10 font-bold underline">
+        Hello world!
+    </h1>
+
+</body>
+
+</html>
