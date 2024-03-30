@@ -9,15 +9,7 @@
     <script>
         tailwind.config = {
             theme: {
-                extend: {
-                    screen:{
-                        '3xl' : '1640px'
-                    },
-                    colors: {
-                        redofred: '#da373d',
-                    }
-                }
-                , screens: {
+                screens: {
                     'sm': '567px',
                     // => @media (min-width: 640px) { ... }
 
@@ -32,17 +24,46 @@
 
                     '2xl': '1536px',
                     // => @media (min-width: 1536px) { ... }
+                },
+
+                extend:{
+                    screens: {
+                        'xs' : {'min':'320px', 'max' : '567px'}
+                    },
+                    colors: {
+                        transparent: 'transparent',
+                        current: 'currentColor',
+                        'white': '#ffffff',
+                        'purple': '#3f3cbb',
+                        'midnight': '#121063',
+                        'metal': '#565584',
+                        'tahiti': '#3ab7bf',
+                        'silver': '#ecebff',
+                        'bubble-gum': '#ff77e9',
+                        'bermuda': '#78dcca',
+                        wscolor : '#2699fb',
+                        wscolor1 : 'pink',
+
+                    }
                 }
+
             }
         }
     </script>
 </head>
 
-<body class="bg-black text-white sm:bg-white 3xl:bg-redofred">
+<body >
 
-    <h1 class="text-3xl py-10 px-10 font-bold underline">
-        Hello world!
-    </h1>
+    <div class="max-w-[1200px] text-white mx-auto my-10 grid lg:grid-cols-4 gap-5 md:grid-cols-3 xs:grid-cols-2">
+        <div class="bg-[green] py-5 text-center">Hello</div>
+        <div class="bg-[green] py-5 text-center">Hello</div>
+        <div class="bg-[green] py-5 text-center">Hello</div>
+        <div class="bg-[green] py-5 text-center">Hello</div>
+        <div class="bg-[green] py-5 text-center">Hello</div>
+        <div class="bg-[green] py-5 text-center">Hello</div>
+        <div class="bg-[green] py-5 text-center">Hello</div>
+        <div class="bg-[green] py-5 text-center">Hello</div>
+    </div>
 
 </body>
 
